@@ -8,7 +8,7 @@ Defines what is happening at this very moment
 "
 mutable struct MatchState
     possession::Possession
-    ball_coordinate::Vector{Float16}
+    match_momentum::Int32
 end
 
 "

@@ -1,18 +1,39 @@
 abstract type Player end
 
-mutable struct PlayerData
+@enum Side left right both
+
+mutable struct Keeper <: Player
     name::String
     number::Int8
     speed::Int8
     ability::Int8
     strength::Int8
+    side::Side
 end
 
-mutable struct FieldPlayer <: Player
-    data::PlayerData
+mutable struct Defender <: Player
+    name::String
+    number::Int8
+    speed::Int8
+    ability::Int8
+    strength::Int8
+    side::Side
 end
 
-mutable struct Keeper <: Player
-    data::PlayerData
-    height::Int8
+mutable struct Midfielder <: Player
+    name::String
+    number::Int8
+    speed::Int8
+    ability::Int8
+    strength::Int8
+    side::Side
+end
+
+mutable struct Attacker <: Player
+    name::String
+    number::Int8
+    speed::Int8
+    ability::Int8
+    strength::Int8
+    side::Side
 end
